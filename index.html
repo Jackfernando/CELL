@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descargar Archivo</title>
     <!-- Incluyendo los íconos de Font Awesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="logo.jpg" crossorigin="anonymous"></script>
     <style>
         body {
             display: flex;
@@ -17,7 +17,7 @@
             background: linear-gradient(45deg, #ff0000, #000000);
             background-size: 400% 400%;
             animation: gradientShift 8s ease infinite;
-            filter: brightness(1.2); /* Ajusta el brillo del fondo */
+            filter: brightness(1.2);
             overflow: hidden;
         }
         .container {
@@ -30,10 +30,15 @@
             width: 100%;
             border: 2px solid #dc3545;
             position: relative;
-            z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+            z-index: 1;
         }
         .logo {
-            width: 100px; /* Ajusta el tamaño del logo según tus necesidades */
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        .icon {
+            font-size: 40px;
+            color: #dc3545;
             margin-bottom: 20px;
         }
         .title {
@@ -103,7 +108,7 @@
             flex-direction: column;
             align-items: center;
         }
-        /* Brillo de fondo */
+
         .background-brightness {
             position: absolute;
             top: 0;
@@ -119,13 +124,15 @@
 <body>
     <div class="background-brightness"></div>
     <div class="container">
+        <!-- Icono de descarga -->
+        <i class="fas fa-download icon"></i>
         <img src="logo.jpg" alt="Logo del Colegio de Economistas" class="logo">
         <div class="title">Colegio de Economistas de la Libertad</div>
         <h1>¡Explora Nuestro Compendio!</h1>
         <p class="description">🌟 ¡Elige tu opción para descargar el archivo! 🌟</p>
 
         <div class="buttons-container">
-            <a href="https://www.dropbox.com/scl/fi/zvb23lwl4kkl5ywie9riu/COMPENDIO-20240913T025902Z-001.zip?rlkey=j3w41yus4nhgtidpuijjyafbl&dl=1" class="button">
+            <a href="https://drive.google.com/drive/folders/1Bf5XJ6xB1pxFDaaGb8u9XjeoYl3rG46u?usp=drive_link" class="button">
                 <i class="fas fa-mobile-alt icon"></i> Descargar para Móvil
             </a>
             <a href="https://www.dropbox.com/scl/fi/zvb23lwl4kkl5ywie9riu/COMPENDIO-20240913T025902Z-001.zip?rlkey=j3w41yus4nhgtidpuijjyafbl&dl=1" class="button">
@@ -135,3 +142,4 @@
     </div>
 </body>
 </html>
+
