@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar Archivo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff0000, #000000);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            filter: brightness(1.2); /* Ajusta el brillo del fondo */
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+            border: 2px solid #dc3545;
+            position: relative;
+            z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+        }
+        .logo {
+            width: 100px; /* Ajusta el tamaño del logo según tus necesidades */
+            margin-bottom: 20px;
+        }
+        .title {
+            color: #dc3545;
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: fadeInUp 2s ease-out;
+        }
+        .description {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #333;
+            animation: fadeInUp 2s ease-out 0.5s;
+        }
+        .button {
+            display: inline-block;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #dc3545;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            padding: 12px 24px;
+        }
+        .button:hover {
+            background-color: #c82333;
+            transform: scale(1.05);
+        }
+        .button:active {
+            background-color: #bd2130;
+            transform: scale(1.02);
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+        /* Brillo de fondo */
+        .background-brightness {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICA8ZyBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxwYXRoIGQ9Ik0wLDBsMCwwbDIwLDIwTDEwLDEwTDIwLDEwTDEwLDEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1vcGFjaXR5PSIuMSIvPgogIDwvZz4KPC9zdmc+Cg==') repeat;
+            z-index: 0;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-brightness"></div>
+    <div class="container">
+        <img src="E:/HTML/logo.jpg" alt="Logo del Colegio de Economistas" class="logo">
+        <div class="title">Colegio de Economistas de la Libertad</div>
+        <h1>¡Explora Nuestro Compendio!</h1>
+        <p class="description">🌟¡Haga clic en "Descargar Archivo" para obtener nuestro Compendio automáticamente!🌟</p>
+        <a href=" " class="button" download>Descargar Archivo</a>
+    </div>
+</body>
+</html>
