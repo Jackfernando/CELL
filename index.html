@@ -36,11 +36,6 @@
             width: 80px;
             margin-bottom: 10px;
         }
-        .icon {
-            font-size: 50px;
-            color: #ffffff; /* Íconos en color blanco */
-            margin-bottom: 20px;
-        }
         .title {
             color: #dc3545;
             font-size: 30px;
@@ -56,7 +51,9 @@
             animation: fadeInUp 2s ease-out 0.5s;
         }
         .button {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 18px;
             color: #ffffff;
             background-color: #dc3545;
@@ -67,6 +64,8 @@
             transition: background-color 0.3s, transform 0.3s;
             padding: 12px 24px;
             margin-bottom: 10px;
+            width: 100%;
+            max-width: 300px;
         }
         .button:hover {
             background-color: #c82333;
@@ -75,6 +74,15 @@
         .button:active {
             background-color: #bd2130;
             transform: scale(1.02);
+        }
+        .icon {
+            font-size: 24px; /* Tamaño más pequeño para los iconos */
+            margin-left: 10px; /* Espacio para mover el icono a la derecha */
+        }
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Animaciones */
@@ -100,16 +108,6 @@
             }
         }
 
-        .icon {
-            margin-right: 10px;
-            text-align: center;
-        }
-        .buttons-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         .background-brightness {
             position: absolute;
             top: 0;
@@ -128,14 +126,14 @@
         <img src="logo.jpg" alt="Logo del Colegio de Economistas" class="logo">
         <div class="title">Colegio de Economistas de la Libertad</div>
         <h1>¡Explora Nuestro Compendio!</h1>
-        <p class="description">🌟 ¡Elige tu opción para descargar el archivo! 🌟</p>
+        <p class="description">🌟¡Elige tu opción para descargar el archivo!🌟</p>
 
         <div class="buttons-container">
             <a href="https://drive.google.com/drive/folders/1Bf5XJ6xB1pxFDaaGb8u9XjeoYl3rG46u?usp=drive_link" class="button">
-                <i class="fas fa-mobile-alt icon"></i> Descargar para Móvil
+                Descargar para Móvil <i class="fas fa-mobile-alt icon"></i>
             </a>
             <a href="https://www.dropbox.com/scl/fi/zvb23lwl4kkl5ywie9riu/COMPENDIO-20240913T025902Z-001.zip?rlkey=j3w41yus4nhgtidpuijjyafbl&dl=1" class="button">
-                <i class="fas fa-desktop icon"></i> Descargar para Computadora
+                Descargar para Computadora <i class="fas fa-desktop icon"></i>
             </a>
         </div>
     </div>
