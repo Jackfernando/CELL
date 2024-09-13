@@ -56,9 +56,7 @@
             animation: fadeInUp 2s ease-out 0.5s;
         }
         .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
             font-size: 18px;
             color: #ffffff;
             background-color: #dc3545;
@@ -69,8 +67,6 @@
             transition: background-color 0.3s, transform 0.3s;
             padding: 12px 24px;
             margin-bottom: 10px;
-            width: 100%;
-            max-width: 300px;
         }
         .button:hover {
             background-color: #c82333;
@@ -79,14 +75,6 @@
         .button:active {
             background-color: #bd2130;
             transform: scale(1.02);
-        }
-        .icon {
-            margin-right: 10px;
-        }
-        .buttons-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         /* Animaciones */
@@ -110,6 +98,16 @@
             100% {
                 background-position: 0% 0%;
             }
+        }
+
+        .icon {
+            margin-right: 10px;
+            text-align: center;
+        }
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .background-brightness {
@@ -143,5 +141,3 @@
     </div>
 </body>
 </html>
-
-
