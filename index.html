@@ -33,15 +33,19 @@
             z-index: 1;
         }
         .logos {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .logo {
-        height: 80px; /* Ajusta la altura a tu preferencia */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .logo {
+        height: 80px; /* Altura para el logo de la izquierda */
         object-fit: contain;
-           }
+    }
+    .logo-celltv {
+        height: 100px; /* Aumenta la altura del logo de CELL TV */
+        object-fit: contain;
+    }
         .title {
             color: #dc3545;
             font-size: 30px;
@@ -165,7 +169,7 @@
     <div class="container">
         <div class="logos">
             <img src="logo.jpg" alt="Logo izquierda" class="logo">
-            <img src="CELLTV.png" alt="Logo derecha" class="logo">
+            <img src="CELLTV.png" alt="Logo derecha" class="logo-celltv">
         </div>
         <div class="title">Colegio de Economistas de la Libertad</div>
         <h1>¡Explora Nuestro Compendio!</h1>
