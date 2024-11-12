@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descargar Archivo</title>
-    <!-- Incluyendo los íconos de Font Awesome -->
+    <!-- Incluyendo los íconos de Font Awesome -->  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
     <style>
         body {
@@ -32,9 +32,14 @@
             position: relative;
             z-index: 1;
         }
+        .logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
         .logo {
             width: 80px;
-            margin-bottom: 10px;
         }
         .title {
             color: #dc3545;
@@ -76,8 +81,8 @@
             transform: scale(1.02);
         }
         .icon {
-            font-size: 24px; /* Tamaño más pequeño para los iconos */
-            margin-left: 10px; /* Espacio para mover el icono a la derecha */
+            font-size: 24px;
+            margin-left: 10px;
         }
         .buttons-container {
             display: flex;
@@ -118,24 +123,85 @@
             z-index: 0;
             opacity: 0.5;
         }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+        .modal-content {
+            max-width: 1200px;
+            width: 90%;
+            animation: zoomIn 0.5s ease;
+            text-align: center;
+        }
+        .modal img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        /* Animación del modal */
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="background-brightness"></div>
     <div class="container">
-        <img src="logo.jpg" alt="Logo del Colegio de Economistas" class="logo">
+        <div class="logos">
+            <img src="loGO.jpg" alt="Logo izquierda" class="logo">
+            <img src="CELLTV.png" alt="Logo derecha" class="logo">
+        </div>
         <div class="title">Colegio de Economistas de la Libertad</div>
         <h1>¡Explora Nuestro Compendio!</h1>
         <p class="description">🌟¡Elige tu opción para descargar el archivo!🌟</p>
 
         <div class="buttons-container">
-            <a href="https://drive.google.com/drive/folders/1Bf5XJ6xB1pxFDaaGb8u9XjeoYl3rG46u?usp=drive_link" class="button">
+            <a href="https://drive.google.com/drive/folders/1Bf5XJ6xB1pxFDaaGb8u9XjeoYl3rG46u?usp=drive_link" class="button" onclick="showModal(event)">
                 Descargar para Móvil <i class="fas fa-mobile-alt icon"></i>
             </a>
-            <a href="https://www.dropbox.com/scl/fi/fwxytjd9cf69untyqz6f5/COMPENDIO-CELL.zip?rlkey=dfdsnv9x3o0l9y5786vf99qx5&st=3ig0ze2g&dl=1" class="button">
+            <a href="https://www.dropbox.com/scl/fi/fwxytjd9cf69untyqz6f5/COMPENDIO-CELL.zip?rlkey=dfdsnv9x3o0l9y5786vf99qx5&st=3ig0ze2g&dl=1" class="button" onclick="showModal(event)">
                 Descargar para Computadora <i class="fas fa-desktop icon"></i>
             </a>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <img src="APEC.png" alt="Imagen de Descarga">
+        </div>
+    </div>
+
+    <script>
+        function showModal(event) {
+            event.preventDefault();
+            const modal = document.getElementById('modal');
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                window.location.href = event.target.href;
+            }, 1500); // Redirige después de 1.5 segundos
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
